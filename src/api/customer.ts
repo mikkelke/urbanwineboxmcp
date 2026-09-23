@@ -19,7 +19,7 @@ const ORDER_FIELDS = `
 const GET_ORDERS_QUERY = `
   query GetOrders($pageSize: Int, $currentPage: Int) {
     customer {
-      orders(pageSize: $pageSize, currentPage: $currentPage) {
+      orders(pageSize: $pageSize, currentPage: $currentPage, sort: { sort_field: CREATED_AT, sort_direction: DESC }) {
         total_count
         page_info { current_page page_size total_pages }
         items { ${ORDER_FIELDS} }
