@@ -1,0 +1,52 @@
+{
+  "name": "urbanwineboxmcp",
+  "version": "0.1.0",
+  "description": "MCP server for urbanwinebox.com — wine search, cart and order history",
+  "type": "module",
+  "bin": {
+    "urbanwineboxmcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "urbanwinebox",
+    "wine",
+    "claude",
+    "llm",
+    "ai"
+  ],
+  "author": "Mikkel Eskildsen",
+  "license": "MIT",
+  "homepage": "https://github.com/mikkelke/urbanwineboxmcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkelke/urbanwineboxmcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikkelke/urbanwineboxmcp/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
